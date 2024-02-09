@@ -14,7 +14,8 @@ The database uses a total of 13 explanatory variables and a single multicategory
 <ol>
 <li>age: Age of the patient</li>
 <li>sex: Sex of the patient (Male, Female)</li>
-<li>cp: Chest pain type (Categorical with 4 levels-Type 1, Type 2, Type 3 and Type 4) Type 1:typical angina <li>Type 2:atypical angina Type 3:non-anginal pain Type 4:asymptomatic</li>
+<li>cp: Chest pain type (Categorical with 4 levels-Type 1, Type 2, Type 3 and Type 4) 
+[Type 1:typical anginaType 2:atypical angina Type 3:non-anginal pain Type 4:asymptomatic]
 <li>trestbps: Resting blood pressure-in mm Hg on admission to the hospital(Continuous)</li>
 <li>chol: Serum cholesterol in mg/dl (Continuous)</li>
 <li>fbs: Fasting blood sugar > 120 mg/dl (True,False)</li>
@@ -24,27 +25,49 @@ The database uses a total of 13 explanatory variables and a single multicategory
 <li>oldpeak: ST depression induced by exercise relative to rest (Continuous)</li>
 <li>slope: The slope of the peak exercise ST segment (Up, Flat, Down)</li>
 <li>ca: Number of major vessels (0-3) colored by flourosopy (0, 1, 2, 3)</li>
-<li>thal: The heart status as retrieved from Thallium test (N(normal),FD(fixed defect), RD(reversible defect)</li>
+<li>thal: The heart status as retrieved from Thallium test N(normal),FD(fixed defect), RD(reversible defect)</li>
 </ol>
 
-Plain codeblock:
-```py linenums="1" title="Adding title" hl_lines="2 3"
-import pandas as pd
-# Some comment
-print("Something")
-```
+<b> Target: </b>
+<ol>
+<li><mark>num: diagnosis of heart disease</mark></li>
+</ol>
 
+## Objective
+The objectives that we are chasing with our final deliverables are:
 
-## Commands
+1. Data Exploration:
+    1. Thoroughly analyze the heart disease database to understand its structure, features, and potential challenges.
+    2. Identify patterns, correlations, and anomalies within the dataset.
+2. Preprocessing:
+    1. Handle missing values, outliers, and ensure data quality.
+    2. Feature scaling, normalization, and other preprocessing techniques to prepare the
+dataset for model training.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+3. Algorithm Selection:
+    1. Evaluate and compare the performance of various classification algorithms families
+suitable for medical diagnosis (with the possibility of running at least one model per
+family group):
+        1. Regression: Linear probability model, logistic regression, and probit regression.
+        2. Classification trees: Decision tree, Random forest, and Gradient boosting.
+        3. Generalized linear classifiers: Support Vector Machines (SVM).
+4. Model Training:
+    1. Implement selected algorithms on the dataset.
+5. Performance Evaluation:
+    1. Assess the models' performance using relevant metrics (accuracy, precision, recall, F1-score).
+    2. Utilize cross-validation to ensure robustness.
+6. Interpretability and Explainability:
+    1. Prioritize models with high interpretability to enhance clinical adoption.
+    2. Provide insights into feature importance and model decision-making processes.
+    3. Provide a full interpretation of the final model and its possible usage into the real world.
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+## Libraries used
+* os
+* numpy
+* pandas
+* matplotlib
+* seaborn
+* re
+* plotly
+* sklearn
+* ucimlrepo
