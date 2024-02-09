@@ -47,6 +47,10 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
 
 copyright: |
   &copy; 2024 <a href="https://github.com/96947300/JEM207-Project.git" target="_blank" rel="noopener"> Nicolas Escudero Rivera and Çağlar Aydın</a>
